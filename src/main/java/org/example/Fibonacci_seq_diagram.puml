@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+'autonumber
+
+class FibonacciIterative {
+    - firstNumber: int
+    - secondNumber: int
+    - tempNumber: int
+    + fibonacci(n: int): int
+}
+
+class FibonacciRecursive {
+    + fibonacci(n: int): int
+}
+
+class FibonacciDP {
+    - fib: int[]
+    + fibonacci(n: int): int
+}
+
+FibonacciIterative --> FibonacciRecursive : uses
+FibonacciIterative --> FibonacciDP : uses
+
+'Alice -> Bob: Authentication Request
+'Bob --> Alice: Authentication Response
+'
+'Alice -> Bob: Another authentication Request
+'Alice <-- Bob: another authentication Response
+@enduml
